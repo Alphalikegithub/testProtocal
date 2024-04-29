@@ -3,7 +3,7 @@
 #include "myproto.h"
 
 using namespace std;
-
+//看看
 //----------------------------------公共函数----------------------------------
 //打印协议数据信息
 void printMyProtoMsg(MyProtoMsg& msg)
