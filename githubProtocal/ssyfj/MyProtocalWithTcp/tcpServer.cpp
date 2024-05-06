@@ -19,7 +19,7 @@ int main(int argc,char* argv[])
 	}
 
 	//获取监听socket信息
-	int listen_sock = startup(argv[2],argv[1]); 
+	int listen_sock = startup(argv[1],argv[2]); 
 
 	//设置结构体，用于接收客户端的socket地址结构体
 	struct sockaddr_in remote;
@@ -45,7 +45,7 @@ int main(int argc,char* argv[])
 	return 0;
 }
 
-int startup(char* _port,char* _ip)
+int startup(char* _ip,char* _port)
 {
 	int sock = socket(AF_INET,SOCK_STREAM,IPPROTO_TCP);
 	if(sock < 0)
