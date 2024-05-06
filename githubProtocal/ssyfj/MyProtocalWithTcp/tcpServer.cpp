@@ -7,7 +7,7 @@
 #include <arpa/inet.h>
 #include "myproto.h"
 
-int startup(char* _port,char* _ip);
+int startup(char* _ip,char* _port);
 int myprotoRecv(int sock,char* buf,int max_len);
 
 int main(int argc,char* argv[])
@@ -39,6 +39,7 @@ int main(int argc,char* argv[])
 		char buf[1024];
 
 		len = myprotoRecv(sock,buf,1024); //len复用，这里作为接收长度------这里可以改为循环
+		
 		
 		close(sock);
 	}

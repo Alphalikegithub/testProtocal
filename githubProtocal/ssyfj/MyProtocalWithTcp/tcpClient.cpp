@@ -54,6 +54,7 @@ int myprotoSend(int sock) //-----------这里改为字符串解析，发送自�
 	uint8_t* pData = NULL;
 
 	MyProtoMsg msg1;
+	//MyProtoMsg msg2;
 
 	MyProtoEncode myEncode;
 
@@ -64,6 +65,11 @@ int myprotoSend(int sock) //-----------这里改为字符串解析，发送自�
 	msg1.body["value"] = "6666";
 
 	pData = myEncode.encode(&msg1,len);
+
+	// msg2.head.server = 2;
+	// msg2.body["op"] = "get";
+	// msg2.body["key"] = "id";
+	// pData = myEncode.encode(&msg2,len);
 
 	return send(sock,pData,len,0);
 }
