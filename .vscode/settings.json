@@ -1,3 +1,6 @@
 {
-    "cmake.sourceDirectory": "/root/testProtocal/MyProtocal"
+    "cmake.sourceDirectory": "/root/testProtocal/MyProtocal",
+    "files.associations": {
+        "iostream": "cpp"
+    }
 }
